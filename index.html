@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Silkroad Tanitim</title>
+  <title>Silkroad Private Server Tanitim Platformu</title>
   <style>
     * {
       margin: 0;
@@ -11,138 +11,374 @@
       box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
+
     body {
-      background: #0f172a;
+      background: #0b1020;
       color: #ffffff;
       line-height: 1.6;
     }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-      url("[images.unsplash.com](https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80)") center/cover no-repeat;
-      text-align: center;
-      padding: 90px 20px;
+
+    a {
+      text-decoration: none;
     }
-    header h1 {
+
+    header {
+      background: #111827;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #facc15;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80)") center/cover no-repeat;
+      padding: 110px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
       font-size: 48px;
       color: #facc15;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
-    header p {
+
+    .hero p {
+      max-width: 850px;
+      margin: 0 auto 30px;
       font-size: 20px;
-      max-width: 800px;
-      margin: 0 auto 25px;
+      color: #e5e7eb;
     }
+
     .btn {
       display: inline-block;
       padding: 14px 28px;
+      margin: 8px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
       background: #facc15;
       color: #111827;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      margin: 8px;
     }
-    section {
-      max-width: 1100px;
+
+    .btn-secondary {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid #facc15;
+    }
+
+    .container {
+      max-width: 1200px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
-    h2 {
+
+    .section-title {
       text-align: center;
-      margin-bottom: 30px;
+      font-size: 34px;
       color: #facc15;
+      margin-bottom: 15px;
     }
-    .cards {
+
+    .section-text {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #cbd5e1;
+    }
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
+
     .card {
-      background: #1e293b;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.25);
+      background: #131c31;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: 0.3s;
     }
-    .card h3 {
-      margin-bottom: 10px;
-      color: #facc15;
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-    .gallery img {
+
+    .card img {
       width: 100%;
       height: 220px;
       object-fit: cover;
-      border-radius: 12px;
     }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .card-content h3 {
+      color: #facc15;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card-content p {
+      color: #d1d5db;
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      border-radius: 20px;
+      background: rgba(250, 204, 21, 0.12);
+      color: #facc15;
+      font-size: 13px;
+    }
+
+    .video-box {
+      background: #131c31;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+
+    .video-box h3 {
+      color: #facc15;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    .video-box p {
+      color: #d1d5db;
+      max-width: 760px;
+      margin: 0 auto 20px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .info-card {
+      background: #131c31;
+      padding: 24px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+
+    .info-card h4 {
+      color: #facc15;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .info-card p {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
     .cta {
       text-align: center;
-      background: #111827;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
       padding: 60px 20px;
-      border-radius: 14px;
     }
+
+    .cta h2 {
+      color: #facc15;
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      color: #e5e7eb;
+      max-width: 760px;
+      margin: 0 auto 25px;
+    }
+
     footer {
+      background: #070b16;
       text-align: center;
-      padding: 25px;
-      background: #020617;
-      color: #cbd5e1;
-      margin-top: 30px;
+      padding: 30px 20px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 16px 20px;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px 10px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Silkroad Online Tanitim Sayfasi</h1>
-    <p>
-      Efsanevi savaslar, guclu karakterler, aktif etkinlikler ve unutulmaz bir Silkroad deneyimi seni bekliyor.
-    </p>
-    <a href="#ozellikler" class="btn">Ozellikleri Incele</a>
-    <a href="#" class="btn">Oyuna Basla</a>
+    <div class="logo">Silkroad Tanitim</div>
+    <nav>
+      <a href="#anasayfa">Ana Sayfa</a>
+      <a href="#serverler">Server Tanitimlari</a>
+      <a href="#videolar">Videolar</a>
+      <a href="#hakkinda">Hakkinda</a>
+      <a href="#reklam">Reklam Ver</a>
+    </nav>
   </header>
-  <section id="ozellikler">
-    <h2>Server Ozellikleri</h2>
-    <div class="cards">
+
+  <section class="hero" id="anasayfa">
+    <h1>Silkroad Private Server Tanitim Platformu</h1>
+    <p>
+      En guncel private server tanitimlari, oyun videolari, server incelemeleri ve reklam paylasimlari burada.
+      Silkroad topluluguna ulasmak isteyen server sahipleri icin etkili bir vitrin.
+    </p>
+    <a href="#serverler" class="btn btn-primary">Serverleri Incele</a>
+    <a href="#reklam" class="btn btn-secondary">Reklam Ver</a>
+  </section>
+
+  <section class="container" id="serverler">
+    <h2 class="section-title">One Cikan Server Tanitimlari</h2>
+    <p class="section-text">
+      Yeni acilan, aktif topluluga sahip ve dikkat ceken Silkroad private server tanitimlarini burada paylasabilirsin.
+    </p>
+
+    <div class="grid">
       <div class="card">
-        <h3>Aktif PvP</h3>
-        <p>Rekabetci savaslar ve guclu oyuncu kapismalari ile heyecan dolu oyun deneyimi.</p>
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80)" alt="Server Tanitim 1">
+        <div class="card-content">
+          <span class="tag">PvP</span>
+          <span class="tag">Yeni Server</span>
+          <h3>Server Tanitim Basligi 1</h3>
+          <p>Server ozellikleri, acilis detaylari, oranlar, etkinlikler ve topluluk bilgileri icin bu alani kullan.</p>
+          <a href="#" class="btn btn-primary">Detaylari Gor</a>
+        </div>
       </div>
+
       <div class="card">
-        <h3>Gelismis Sistem</h3>
-        <p>Dengeli yapilar, daha akici oyun deneyimi ve oyuncu odakli duzenlemeler.</p>
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1200&q=80)" alt="Server Tanitim 2">
+        <div class="card-content">
+          <span class="tag">CH / EU</span>
+          <span class="tag">Event</span>
+          <h3>Server Tanitim Basligi 2</h3>
+          <p>Video tanitim, kayit bilgisi, discord toplulugu ve server farklarini gosteren etkili bir kart alani.</p>
+          <a href="#" class="btn btn-primary">Detaylari Gor</a>
+        </div>
       </div>
+
       <div class="card">
-        <h3>Gunluk Eventler</h3>
-        <p>Her gun duzenlenen etkinliklerle oduller kazan ve topluluga katil.</p>
-      </div>
-      <div class="card">
-        <h3>Topluluk Ruhu</h3>
-        <p>Guild savaslari, parti sistemi ve arkadaslarinla birlikte guclu bir yolculuk.</p>
+        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=1200&q=80)" alt="Server Tanitim 3">
+        <div class="card-content">
+          <span class="tag">Job</span>
+          <span class="tag">Aktif Topluluk</span>
+          <h3>Server Tanitim Basligi 3</h3>
+          <p>Bu alan server inceleme, oyun ici gorseller, tanitim metni ve oyunculari cekmek icin kullanilabilir.</p>
+          <a href="#" class="btn btn-primary">Detaylari Gor</a>
+        </div>
       </div>
     </div>
   </section>
-  <section>
-    <h2>Galeri</h2>
-    <div class="gallery">
-      <img src="[images.unsplash.com](https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80)" alt="Gorsel 1">
-      <img src="[images.unsplash.com](https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=1200&q=80)" alt="Gorsel 2">
-      <img src="[images.unsplash.com](https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1200&q=80)" alt="Gorsel 3">
-    </div>
-  </section>
-  <section>
-    <div class="cta">
-      <h2>Macera Seni Bekliyor</h2>
-      <p style="max-width: 700px; margin: 0 auto 25px;">
-        Karakterini guclendir, etkinliklere katil ve Silkroad evreninde yerini hemen al.
+
+  <section class="container" id="videolar">
+    <h2 class="section-title">Video Tanitim Alani</h2>
+    <p class="section-text">
+      YouTube video tanitimlari, server incelemeleri, event ozetleri ve oyun ici goruntulerle ziyaretcilere daha guclu bir sunum yap.
+    </p>
+
+    <div class="video-box">
+      <h3>Tanitim Videolari Burada Yayinlanir</h3>
+      <p>
+        Bu bolume video kapak gorselleri, YouTube baglantilari ve aciklama alanlari eklenebilir.
+        Boylece hem server sahipleri hem oyuncular tek noktadan tum tanitimlara ulasabilir.
       </p>
-      <a href="#" class="btn">Kayit Ol</a>
-      <a href="#" class="btn">Discord</a>
+      <a href="#" class="btn btn-primary">Video Galerisi</a>
     </div>
   </section>
+
+  <section class="container" id="hakkinda">
+    <h2 class="section-title">Bu Platformda Neler Var?</h2>
+    <p class="section-text">
+      Silkroad private server toplulugu icin tanitim, inceleme, video paylasimi ve reklam odakli duzenli bir yayin alani.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>Server Tanitimlari</h4>
+        <p>Private server acilislarini, ozelliklerini ve dikkat ceken yanlarini profesyonel sekilde sergile.</p>
+      </div>
+      <div class="info-card">
+        <h4>Video Incelemeleri</h4>
+        <p>Oyun ici goruntuler, tanitim videolari ve oynanis ozetleri ile daha guclu bir tanitim sun.</p>
+      </div>
+      <div class="info-card">
+        <h4>Topluluk Erisimi</h4>
+        <p>Silkroad ilgisi olan ziyaretcilere ulasarak serverini daha gorunur hale getir.</p>
+      </div>
+      <div class="info-card">
+        <h4>Reklam Alani</h4>
+        <p>Server sahipleri icin tanitim, sponsorlu icerik ve sabit reklam alanlari sunulabilir.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="reklam">
+    <div class="cta">
+      <h2>Serverini Tanitmak Ister misin?</h2>
+      <p>
+        Silkroad private server tanitimi, video inceleme, banner reklam veya sponsorlu yayin icin bu alani kullan.
+        Iletisim bilgilerini ekleyerek server sahiplerinin sana kolayca ulasmasini saglayabilirsin.
+      </p>
+      <a href="#" class="btn btn-primary">Iletisim</a>
+      <a href="#" class="btn btn-secondary">Reklam Detaylari</a>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2026 Silkroad Tanitim Sayfasi</p>
+    <p>© 2026 Silkroad Tanitim Platformu - Tum haklari saklidir.</p>
   </footer>
+
 </body>
 </html>
