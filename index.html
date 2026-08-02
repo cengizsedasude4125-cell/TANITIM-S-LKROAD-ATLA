@@ -13,8 +13,10 @@
     }
 
     body {
-      background: #dfe3e8;
-      color: #111827;
+      color: #f3f4f6;
+      background:
+        linear-gradient(rgba(7, 11, 20, 0.88), rgba(7, 11, 20, 0.92)),
+        url("[images.unsplash.com](https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1800&q=80)") center top / cover fixed no-repeat;
     }
 
     a {
@@ -23,9 +25,11 @@
     }
 
     .topbar {
-      background: #243444;
-      padding: 22px 20px;
-      color: white;
+      background: rgba(19, 30, 45, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 193, 7, 0.12);
+      padding: 24px 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
     }
 
     .topbar-wrap {
@@ -39,37 +43,43 @@
     }
 
     .logo {
-      font-size: 42px;
+      font-size: 46px;
       font-weight: bold;
-      letter-spacing: 1px;
       color: #ffffff;
+      letter-spacing: 1px;
+      text-shadow: 0 0 16px rgba(255, 193, 7, 0.18);
     }
 
     .top-banner {
-      min-height: 72px;
+      min-height: 78px;
       min-width: 420px;
-      background: linear-gradient(90deg, #6e0b0b, #b91c1c);
+      border-radius: 8px;
+      padding: 12px 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fbbf24;
-      font-size: 30px;
-      font-weight: bold;
-      border-radius: 4px;
-      padding: 10px 20px;
       text-align: center;
+      font-size: 34px;
+      font-weight: bold;
+      color: #ffcc33;
+      background:
+        linear-gradient(rgba(90, 15, 15, 0.72), rgba(125, 22, 22, 0.78)),
+        url("[images.unsplash.com](https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1400&q=80)") center/cover no-repeat;
+      box-shadow: 0 0 25px rgba(255, 140, 0, 0.18);
+      border: 1px solid rgba(255, 193, 7, 0.18);
     }
 
     .navbar {
-      background: #2f4358;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      border-bottom: 1px solid rgba(0,0,0,0.15);
+      background: rgba(33, 49, 68, 0.88);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(255,255,255,0.04);
+      border-bottom: 1px solid rgba(255, 193, 7, 0.08);
     }
 
     .navbar-wrap {
       max-width: 1280px;
       margin: auto;
-      padding: 10px 20px;
+      padding: 12px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -86,23 +96,32 @@
     .menu a {
       color: #e5e7eb;
       font-size: 14px;
+      transition: 0.3s;
     }
 
     .menu a:hover {
-      color: #fbbf24;
+      color: #ffcc33;
+      text-shadow: 0 0 10px rgba(255, 193, 7, 0.35);
     }
 
     .search input {
-      width: 240px;
-      padding: 8px 10px;
-      border: none;
-      border-radius: 4px;
+      width: 250px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.08);
+      color: white;
+      outline: none;
+    }
+
+    .search input::placeholder {
+      color: #cbd5e1;
     }
 
     .page {
       max-width: 1280px;
-      margin: 14px auto;
-      padding: 0 20px;
+      margin: 18px auto;
+      padding: 0 20px 30px;
       display: grid;
       grid-template-columns: 2.2fr 1fr;
       gap: 18px;
@@ -116,18 +135,21 @@
     }
 
     .panel {
-      background: #ffffff;
-      border: 1px solid #cfd8e3;
-      border-radius: 4px;
+      background: rgba(10, 18, 31, 0.86);
+      border: 1px solid rgba(255, 193, 7, 0.10);
+      border-radius: 8px;
       overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(6px);
     }
 
     .panel-title {
-      background: #33485e;
+      background: linear-gradient(90deg, rgba(52, 72, 94, 0.96), rgba(36, 51, 68, 0.96));
       color: white;
-      padding: 12px 14px;
+      padding: 13px 15px;
       font-weight: bold;
       font-size: 15px;
+      border-bottom: 1px solid rgba(255, 193, 7, 0.08);
     }
 
     .panel-body {
@@ -141,31 +163,72 @@
     }
 
     .mini-banner {
-      min-height: 84px;
-      border-radius: 4px;
-      background: linear-gradient(90deg, #1f1f1f, #5b4428);
-      color: #fbbf24;
+      min-height: 88px;
+      border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       font-size: 22px;
       font-weight: bold;
+      color: #ffcc33;
       padding: 10px;
+      border: 1px solid rgba(255, 193, 7, 0.14);
+      box-shadow: inset 0 0 40px rgba(255, 193, 7, 0.04);
+      transition: 0.3s;
+    }
+
+    .mini-banner:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    .banner-1 {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1200&q=80)") center/cover;
+    }
+
+    .banner-2 {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=1200&q=80)") center/cover;
+    }
+
+    .banner-3 {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80)") center/cover;
+    }
+
+    .banner-4 {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80)") center/cover;
+    }
+
+    .banner-5 {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80)") center/cover;
+    }
+
+    .banner-6 {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1520034475321-cbe63696469a?auto=format&fit=crop&w=1200&q=80)") center/cover;
     }
 
     .wide-banner {
-      min-height: 110px;
-      border-radius: 4px;
-      background: linear-gradient(90deg, #121826, #3f2f16);
-      color: #fbbf24;
+      min-height: 120px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       font-size: 30px;
       font-weight: bold;
+      color: #ffcc33;
       padding: 20px;
+      background:
+        linear-gradient(rgba(8, 14, 26, 0.76), rgba(58, 37, 10, 0.72)),
+        url("[images.unsplash.com](https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80)") center/cover no-repeat;
+      border: 1px solid rgba(255, 193, 7, 0.12);
+      box-shadow: 0 0 30px rgba(255, 193, 7, 0.08);
     }
 
     .cards {
@@ -175,16 +238,20 @@
     }
 
     .card {
-      border: 1px solid #dde3ea;
-      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 6px;
       overflow: hidden;
-      background: #f8fafc;
+      background: rgba(13, 22, 37, 0.95);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.30);
     }
 
     .card-image {
-      height: 170px;
-      background: linear-gradient(135deg, #111827, #374151);
-      color: #fbbf24;
+      height: 185px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -192,6 +259,28 @@
       font-weight: bold;
       text-align: center;
       padding: 16px;
+      color: #ffcc33;
+      text-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-1 {
+      background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.60)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80)") center/cover;
+    }
+
+    .img-2 {
+      background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.60)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1200&q=80)") center/cover;
+    }
+
+    .img-3 {
+      background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.60)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=1200&q=80)") center/cover;
+    }
+
+    .img-4 {
+      background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.60)),
+      url("[images.unsplash.com](https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80)") center/cover;
     }
 
     .card-body {
@@ -201,26 +290,28 @@
     .card-body h3 {
       font-size: 18px;
       margin-bottom: 8px;
-      color: #1f2937;
+      color: #ffffff;
     }
 
     .card-body p {
       font-size: 14px;
-      color: #4b5563;
+      color: #cbd5e1;
       margin-bottom: 12px;
     }
 
     .btn {
       display: inline-block;
-      background: #2e5b89;
-      color: white;
+      background: linear-gradient(90deg, #b7791f, #f6ad1b);
+      color: #111827;
       padding: 9px 14px;
-      border-radius: 4px;
+      border-radius: 5px;
       font-size: 13px;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     .btn:hover {
-      background: #214566;
+      filter: brightness(1.08);
     }
 
     .content-list {
@@ -230,21 +321,21 @@
     }
 
     .content-item {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 4px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 5px;
       padding: 12px;
     }
 
     .content-item h4 {
       font-size: 14px;
       margin-bottom: 5px;
-      color: #1f2937;
+      color: #ffffff;
     }
 
     .content-item p {
       font-size: 13px;
-      color: #6b7280;
+      color: #cbd5e1;
     }
 
     .login-box {
@@ -254,18 +345,20 @@
     }
 
     .login-box input {
-      padding: 10px;
-      border: 1px solid #d1d5db;
-      border-radius: 4px;
+      padding: 11px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 5px;
       font-size: 14px;
+      background: rgba(255,255,255,0.05);
+      color: white;
     }
 
     .login-box button {
-      padding: 10px;
-      background: #243444;
+      padding: 11px;
+      background: linear-gradient(90deg, #243444, #1a2533);
       color: white;
-      border: none;
-      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 5px;
       cursor: pointer;
     }
 
@@ -279,16 +372,22 @@
       display: block;
       color: white;
       padding: 13px 14px;
-      border-radius: 4px;
+      border-radius: 5px;
       font-size: 14px;
       font-weight: bold;
+      transition: 0.3s;
     }
 
-    .discord { background: #5865f2; }
-    .elite { background: #4f46e5; }
-    .whatsapp { background: #16a34a; }
-    .facebook { background: #2563eb; }
-    .orange { background: #d97706; }
+    .quick-link:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .discord { background: linear-gradient(90deg, #5865f2, #6f7bff); }
+    .elite { background: linear-gradient(90deg, #4f46e5, #6d63ff); }
+    .whatsapp { background: linear-gradient(90deg, #16a34a, #1db954); }
+    .facebook { background: linear-gradient(90deg, #2563eb, #3b82f6); }
+    .orange { background: linear-gradient(90deg, #d97706, #f59e0b); }
 
     .small-stats {
       display: flex;
@@ -297,30 +396,31 @@
     }
 
     .stat-item {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 4px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 5px;
       padding: 12px;
     }
 
     .stat-item strong {
       display: block;
       margin-bottom: 4px;
-      color: #1f2937;
+      color: #ffffff;
       font-size: 14px;
     }
 
     .stat-item span {
       font-size: 13px;
-      color: #6b7280;
+      color: #cbd5e1;
     }
 
     footer {
-      background: #243444;
+      background: rgba(13, 22, 37, 0.92);
       color: #d1d5db;
       text-align: center;
       padding: 24px 20px;
       margin-top: 24px;
+      border-top: 1px solid rgba(255, 193, 7, 0.08);
     }
 
     @media (max-width: 1024px) {
@@ -387,12 +487,12 @@
       <div class="panel">
         <div class="panel-body">
           <div class="banner-grid">
-            <div class="mini-banner">CAP 80 - 1X RATE</div>
-            <div class="mini-banner">ONLY CH SERVER</div>
-            <div class="mini-banner">YENI ACILAN SERVER</div>
-            <div class="mini-banner">VIDEO TANITIM ALANI</div>
-            <div class="mini-banner">PRIVATE SERVER REKLAMI</div>
-            <div class="mini-banner">SPONSORLU ICERIK</div>
+            <div class="mini-banner banner-1">CAP 80 - 1X RATE</div>
+            <div class="mini-banner banner-2">ONLY CH SERVER</div>
+            <div class="mini-banner banner-3">YENI ACILAN SERVER</div>
+            <div class="mini-banner banner-4">VIDEO TANITIM ALANI</div>
+            <div class="mini-banner banner-5">PRIVATE SERVER REKLAMI</div>
+            <div class="mini-banner banner-6">SPONSORLU ICERIK</div>
           </div>
         </div>
       </div>
@@ -404,7 +504,7 @@
         <div class="panel-body">
           <div class="cards">
             <div class="card">
-              <div class="card-image">SERVER TANITIM 1</div>
+              <div class="card-image img-1">SERVER TANITIM 1</div>
               <div class="card-body">
                 <h3>Yeni Server Acilisi</h3>
                 <p>Server ozellikleri, acilis tarihi, topluluk bilgisi ve dikkat ceken tum detaylar icin tanitim kutusu.</p>
@@ -413,7 +513,7 @@
             </div>
 
             <div class="card">
-              <div class="card-image">SERVER TANITIM 2</div>
+              <div class="card-image img-2">SERVER TANITIM 2</div>
               <div class="card-body">
                 <h3>Video Inceleme</h3>
                 <p>Tanitim videolari, server oynanis kesitleri ve detayli inceleme baglantilari bu alanda yer alir.</p>
@@ -422,7 +522,7 @@
             </div>
 
             <div class="card">
-              <div class="card-image">SERVER TANITIM 3</div>
+              <div class="card-image img-3">SERVER TANITIM 3</div>
               <div class="card-body">
                 <h3>Topluluk Paylasimi</h3>
                 <p>Oyuncu toplulugu, acilis duyurulari, etkinlikler ve dikkat ceken icerikler icin uygun alan.</p>
@@ -431,7 +531,7 @@
             </div>
 
             <div class="card">
-              <div class="card-image">SERVER TANITIM 4</div>
+              <div class="card-image img-4">SERVER TANITIM 4</div>
               <div class="card-body">
                 <h3>Reklam ve Sponsor</h3>
                 <p>Banner reklam, ozel tanitim yazisi ve sponsorlu video calismalari icin ayrilmis profesyonel kutu.</p>
@@ -485,57 +585,3 @@
         <div class="panel-title">Topluluk Baglantilari</div>
         <div class="panel-body">
           <div class="quick-links">
-            <a href="#" class="quick-link discord">Discord Sunucusu</a>
-            <a href="#" class="quick-link elite">Elite Community</a>
-            <a href="#" class="quick-link whatsapp">WhatsApp Toplulugu</a>
-            <a href="#" class="quick-link facebook">Facebook Grubu</a>
-            <a href="#" class="quick-link orange">Kisa Link Olustur</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-title">Live Now</div>
-        <div class="panel-body">
-          <div class="small-stats">
-            <div class="stat-item">
-              <strong>BestSRO</strong>
-              <span>Bu yayin bazilarini kudurtur - TikTok</span>
-            </div>
-            <div class="stat-item">
-              <strong>Yeni yayin eklendi</strong>
-              <span>Canli yayin ve video tanitim alani burada listelenebilir.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-title">Buyuk Acilislar</div>
-        <div class="panel-body">
-          <div class="small-stats">
-            <div class="stat-item">
-              <strong>ATHENS 2005</strong>
-              <span>Macro | 80 cap CH | Hard rates | 07.08.2026</span>
-            </div>
-            <div class="stat-item">
-              <strong>Yeni PvP server</strong>
-              <span>Yaklasan acilis tarihi ve one cikan sistemler burada gosterilir.</span>
-            </div>
-            <div class="stat-item">
-              <strong>Video tanitim takvimi</strong>
-              <span>Yayinlanacak tanitim icerikleri ve banner planlamasi icin alan.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </aside>
-  </main>
-
-  <footer>
-    <p>© 2026 Silkroad Tanitim Paylasim Dunyasi - Tum haklari saklidir.</p>
-  </footer>
-
-</body>
-</html>
