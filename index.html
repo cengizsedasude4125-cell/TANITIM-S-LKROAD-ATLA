@@ -12,44 +12,69 @@
       font-family: Arial, sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      background: #0b0f19;
-      color: #ffffff;
-      line-height: 1.6;
+      background: #dfe3e8;
+      color: #111827;
     }
 
     a {
       text-decoration: none;
+      color: inherit;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(10, 14, 24, 0.95);
-      border-bottom: 1px solid rgba(255, 215, 80, 0.12);
-      backdrop-filter: blur(8px);
+    .topbar {
+      background: #243444;
+      padding: 22px 20px;
+      color: white;
     }
 
-    .nav {
-      max-width: 1200px;
+    .topbar-wrap {
+      max-width: 1280px;
       margin: auto;
-      padding: 18px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .logo {
-      color: #f5c84c;
-      font-size: 24px;
+      font-size: 42px;
       font-weight: bold;
       letter-spacing: 1px;
+      color: #ffffff;
+    }
+
+    .top-banner {
+      min-height: 72px;
+      min-width: 420px;
+      background: linear-gradient(90deg, #6e0b0b, #b91c1c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fbbf24;
+      font-size: 30px;
+      font-weight: bold;
+      border-radius: 4px;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    .navbar {
+      background: #2f4358;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+
+    .navbar-wrap {
+      max-width: 1280px;
+      margin: auto;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .menu {
@@ -60,459 +85,453 @@
 
     .menu a {
       color: #e5e7eb;
-      font-size: 15px;
-      transition: 0.3s;
+      font-size: 14px;
     }
 
     .menu a:hover {
-      color: #f5c84c;
+      color: #fbbf24;
     }
 
-    .hero {
-      min-height: 88vh;
+    .search input {
+      width: 240px;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .page {
+      max-width: 1280px;
+      margin: 14px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap: 18px;
+    }
+
+    .left-column,
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .panel {
+      background: #ffffff;
+      border: 1px solid #cfd8e3;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .panel-title {
+      background: #33485e;
+      color: white;
+      padding: 12px 14px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .panel-body {
+      padding: 14px;
+    }
+
+    .banner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .mini-banner {
+      min-height: 84px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #1f1f1f, #5b4428);
+      color: #fbbf24;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 20px;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.76)),
-        url("[images.unsplash.com](https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80)") center/cover no-repeat;
-    }
-
-    .hero-content {
-      max-width: 950px;
-    }
-
-    .hero-subtitle {
-      color: #f5c84c;
-      font-size: 18px;
-      letter-spacing: 3px;
-      margin-bottom: 16px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      font-size: 58px;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-
-    .hero h1 span {
-      color: #f5c84c;
-    }
-
-    .hero p {
-      max-width: 780px;
-      margin: 0 auto 30px;
-      color: #d1d5db;
-      font-size: 19px;
-    }
-
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 10px;
+      font-size: 22px;
       font-weight: bold;
-      transition: 0.3s;
+      padding: 10px;
     }
 
-    .btn-primary {
-      background: #f5c84c;
-      color: #111827;
-    }
-
-    .btn-primary:hover {
-      background: #ffda70;
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      border: 1px solid #f5c84c;
-      color: #f5c84c;
-      background: transparent;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(245, 200, 76, 0.08);
-      transform: translateY(-2px);
-    }
-
-    .section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-
-    .section-title {
+    .wide-banner {
+      min-height: 110px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #121826, #3f2f16);
+      color: #fbbf24;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      font-size: 36px;
-      color: #f5c84c;
-      margin-bottom: 14px;
-    }
-
-    .section-text {
-      text-align: center;
-      color: #cbd5e1;
-      max-width: 820px;
-      margin: 0 auto 40px;
-      font-size: 17px;
+      font-size: 30px;
+      font-weight: bold;
+      padding: 20px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
 
     .card {
-      background: #12192b;
-      border: 1px solid rgba(255, 215, 80, 0.08);
-      border-radius: 18px;
+      border: 1px solid #dde3ea;
+      border-radius: 4px;
       overflow: hidden;
-      transition: 0.3s;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+      background: #f8fafc;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
-    }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
+    .card-image {
+      height: 170px;
+      background: linear-gradient(135deg, #111827, #374151);
+      color: #fbbf24;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      padding: 16px;
     }
 
     .card-body {
-      padding: 22px;
+      padding: 14px;
     }
 
-    .tag {
-      display: inline-block;
-      padding: 6px 12px;
-      margin: 0 8px 10px 0;
-      border-radius: 999px;
-      background: rgba(245, 200, 76, 0.12);
-      color: #f5c84c;
-      font-size: 13px;
+    .card-body h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #1f2937;
     }
 
-    .card h3 {
-      color: #ffffff;
-      font-size: 23px;
+    .card-body p {
+      font-size: 14px;
+      color: #4b5563;
       margin-bottom: 12px;
     }
 
-    .card p {
-      color: #cbd5e1;
-      font-size: 15px;
-      margin-bottom: 18px;
+    .btn {
+      display: inline-block;
+      background: #2e5b89;
+      color: white;
+      padding: 9px 14px;
+      border-radius: 4px;
+      font-size: 13px;
     }
 
-    .video-area {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 24px;
-      align-items: stretch;
+    .btn:hover {
+      background: #214566;
     }
 
-    .video-main,
-    .video-side {
-      background: #12192b;
-      border: 1px solid rgba(255, 215, 80, 0.08);
-      border-radius: 18px;
-      overflow: hidden;
+    .content-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .video-main img,
-    .video-side img {
-      width: 100%;
-      object-fit: cover;
-      display: block;
+    .content-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 12px;
     }
 
-    .video-main img {
-      height: 320px;
+    .content-item h4 {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #1f2937;
     }
 
-    .video-side img {
-      height: 180px;
+    .content-item p {
+      font-size: 13px;
+      color: #6b7280;
     }
 
-    .video-content {
-      padding: 22px;
+    .login-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
-    .video-content h3 {
-      color: #f5c84c;
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
-
-    .video-content p {
-      color: #d1d5db;
-      margin-bottom: 16px;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .feature-box {
-      background: #12192b;
-      border: 1px solid rgba(255, 215, 80, 0.08);
-      border-radius: 16px;
-      padding: 24px;
-      text-align: center;
-    }
-
-    .feature-box h4 {
-      color: #f5c84c;
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .feature-box p {
-      color: #cbd5e1;
-      font-size: 15px;
-    }
-
-    .cta {
-      max-width: 1200px;
-      margin: 0 auto 80px;
-      padding: 0 20px;
-    }
-
-    .cta-box {
-      text-align: center;
-      background: linear-gradient(135deg, #111827, #1a2238);
-      border: 1px solid rgba(255, 215, 80, 0.08);
-      border-radius: 22px;
-      padding: 60px 20px;
-    }
-
-    .cta-box h2 {
-      color: #f5c84c;
-      font-size: 38px;
-      margin-bottom: 16px;
-    }
-
-    .cta-box p {
-      max-width: 780px;
-      margin: 0 auto 25px;
-      color: #dbe2ea;
-      font-size: 17px;
-    }
-
-    footer {
-      background: #070b14;
-      border-top: 1px solid rgba(255, 215, 80, 0.08);
-      text-align: center;
-      padding: 30px 20px;
-      color: #94a3b8;
+    .login-box input {
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
       font-size: 14px;
     }
 
-    @media (max-width: 900px) {
-      .hero h1 {
-        font-size: 42px;
+    .login-box button {
+      padding: 10px;
+      background: #243444;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .quick-link {
+      display: block;
+      color: white;
+      padding: 13px 14px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .discord { background: #5865f2; }
+    .elite { background: #4f46e5; }
+    .whatsapp { background: #16a34a; }
+    .facebook { background: #2563eb; }
+    .orange { background: #d97706; }
+
+    .small-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .stat-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 12px;
+    }
+
+    .stat-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #1f2937;
+      font-size: 14px;
+    }
+
+    .stat-item span {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    footer {
+      background: #243444;
+      color: #d1d5db;
+      text-align: center;
+      padding: 24px 20px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .page {
+        grid-template-columns: 1fr;
       }
 
-      .hero p {
-        font-size: 17px;
-      }
-
-      .video-area {
+      .cards,
+      .banner-grid {
         grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 640px) {
-      .nav {
+    @media (max-width: 700px) {
+      .logo {
+        font-size: 30px;
+      }
+
+      .top-banner {
+        min-width: 100%;
+        font-size: 22px;
+      }
+
+      .search input {
+        width: 100%;
+      }
+
+      .navbar-wrap,
+      .topbar-wrap {
         flex-direction: column;
         align-items: flex-start;
-      }
-
-      .menu {
-        gap: 12px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 90px 20px;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero-subtitle {
-        font-size: 14px;
-        letter-spacing: 2px;
-      }
-
-      .section-title {
-        font-size: 30px;
-      }
-
-      .cta-box h2 {
-        font-size: 30px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="nav">
-      <div class="logo">Silkroad Tanitim</div>
-      <nav class="menu">
-        <a href="#anasayfa">Ana Sayfa</a>
-        <a href="#serverler">Server Tanitimlari</a>
-        <a href="#videolar">Videolar</a>
-        <a href="#icerikler">Icerikler</a>
-        <a href="#iletisim">Iletisim</a>
-      </nav>
+  <header class="topbar">
+    <div class="topbar-wrap">
+      <div class="logo">SILKROAD TANITIM</div>
+      <div class="top-banner">SILKROAD DUNYASI</div>
     </div>
   </header>
 
-  <section class="hero" id="anasayfa">
-    <div class="hero-content">
-      <div class="hero-subtitle">Silkroad Tanitim Paylasim Dunyasi</div>
-      <h1><span>SILKROAD</span> DUNYASI</h1>
-      <p>
-        Silkroad private server tanitimlari, video paylasimlari, oyun incelemeleri ve topluluk odakli icerikler tek platformda bulusuyor.
-      </p>
-      <div class="btn-group">
-        <a href="#serverler" class="btn btn-primary">Serverleri Kesfet</a>
-        <a href="#videolar" class="btn btn-secondary">Videolari Incele</a>
+  <nav class="navbar">
+    <div class="navbar-wrap">
+      <div class="menu">
+        <a href="#">Ana Sayfa</a>
+        <a href="#">SRO Tanitimlari</a>
+        <a href="#">Kesfet</a>
+        <a href="#">Takvim</a>
+        <a href="#">Videolar</a>
+        <a href="#">Kayit Ol</a>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Ara..." />
       </div>
     </div>
-  </section>
+  </nav>
 
-  <section class="section" id="serverler">
-    <h2 class="section-title">One Cikan Server Tanitimlari</h2>
-    <p class="section-text">
-      Yeni acilan, aktif topluluga sahip ve dikkat ceken Silkroad private server tanitimlarini burada sergileyebilir, ziyaretcilere hizli ve guclu bir ilk izlenim sunabilirsin.
-    </p>
+  <main class="page">
+    <section class="left-column">
 
-    <div class="cards">
-      <div class="card">
-        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=80)" alt="Server tanitim gorseli">
-        <div class="card-body">
-          <span class="tag">PvP</span>
-          <span class="tag">Yeni Acilis</span>
-          <h3>Server Tanitim Basligi</h3>
-          <p>Server ozellikleri, acilis tarihi, oyun yapisi, topluluk bilgisi ve dikkat ceken detaylar bu alanda tanitilabilir.</p>
-          <a href="#" class="btn btn-primary">Detaylari Gor</a>
+      <div class="panel">
+        <div class="panel-body">
+          <div class="banner-grid">
+            <div class="mini-banner">CAP 80 - 1X RATE</div>
+            <div class="mini-banner">ONLY CH SERVER</div>
+            <div class="mini-banner">YENI ACILAN SERVER</div>
+            <div class="mini-banner">VIDEO TANITIM ALANI</div>
+            <div class="mini-banner">PRIVATE SERVER REKLAMI</div>
+            <div class="mini-banner">SPONSORLU ICERIK</div>
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=1200&q=80)" alt="Server tanitim gorseli">
-        <div class="card-body">
-          <span class="tag">CH / EU</span>
-          <span class="tag">Event</span>
-          <h3>Private Server Inceleme</h3>
-          <p>Video tanitimi, kayit bilgileri, discord toplulugu ve server farklarini one cikaran profesyonel bir tanitim bolumu.</p>
-          <a href="#" class="btn btn-primary">Detaylari Gor</a>
+      <div class="wide-banner">SILKROAD PRIVATE SERVER TANITIM PLATFORMU</div>
+
+      <div class="panel">
+        <div class="panel-title">One Cikan Server Tanitimlari</div>
+        <div class="panel-body">
+          <div class="cards">
+            <div class="card">
+              <div class="card-image">SERVER TANITIM 1</div>
+              <div class="card-body">
+                <h3>Yeni Server Acilisi</h3>
+                <p>Server ozellikleri, acilis tarihi, topluluk bilgisi ve dikkat ceken tum detaylar icin tanitim kutusu.</p>
+                <a href="#" class="btn">Detaylari Gor</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image">SERVER TANITIM 2</div>
+              <div class="card-body">
+                <h3>Video Inceleme</h3>
+                <p>Tanitim videolari, server oynanis kesitleri ve detayli inceleme baglantilari bu alanda yer alir.</p>
+                <a href="#" class="btn">Videoyu Incele</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image">SERVER TANITIM 3</div>
+              <div class="card-body">
+                <h3>Topluluk Paylasimi</h3>
+                <p>Oyuncu toplulugu, acilis duyurulari, etkinlikler ve dikkat ceken icerikler icin uygun alan.</p>
+                <a href="#" class="btn">Detaylari Gor</a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-image">SERVER TANITIM 4</div>
+              <div class="card-body">
+                <h3>Reklam ve Sponsor</h3>
+                <p>Banner reklam, ozel tanitim yazisi ve sponsorlu video calismalari icin ayrilmis profesyonel kutu.</p>
+                <a href="#" class="btn">Bilgi Al</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=1200&q=80)" alt="Server tanitim gorseli">
-        <div class="card-body">
-          <span class="tag">Job</span>
-          <span class="tag">Aktif Topluluk</span>
-          <h3>Oyun Tanitim Icerigi</h3>
-          <p>Server listeleri, oyun ici ekran goruntuleri, etkinlik duyurulari ve oyunculari ceken tanitim yazi alanlari.</p>
-          <a href="#" class="btn btn-primary">Detaylari Gor</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="videolar">
-    <h2 class="section-title">Video Tanitimlari</h2>
-    <p class="section-text">
-      YouTube tanitim videolari, oynanis kayitlari, event ozetleri ve inceleme icerikleriyle ziyaretcilere daha zengin bir deneyim sun.
-    </p>
-
-    <div class="video-area">
-      <div class="video-main">
-        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1400&q=80)" alt="Video tanitim kapagi">
-        <div class="video-content">
-          <h3>One Cikan Video Tanitimi</h3>
-          <p>Bu alan, ana tanitim videosu veya dikkat cekmek istedigin bir inceleme videosu icin kullanilabilir. Video linki, aciklama ve izleme butonu burada yer alabilir.</p>
-          <a href="#" class="btn btn-primary">Videoyu Izle</a>
+      <div class="panel">
+        <div class="panel-title">Son Eklenen Icerikler</div>
+        <div class="panel-body">
+          <div class="content-list">
+            <div class="content-item">
+              <h4>80 Cap yeni server tanitimi eklendi</h4>
+              <p>Yeni server hakkinda detayli tanitim icerigi ve acilis bilgileri yayinlandi.</p>
+            </div>
+            <div class="content-item">
+              <h4>Yeni video paylasimi eklendi</h4>
+              <p>Silkroad oynanis ve server tanitim videosu yayina alindi.</p>
+            </div>
+            <div class="content-item">
+              <h4>Haftanin one cikan serverlari</h4>
+              <p>Aktif topluluk ve dikkat ceken sistemlere sahip secili server paylasimlari.</p>
+            </div>
+            <div class="content-item">
+              <h4>Reklam ve is birligi duyurusu</h4>
+              <p>Server sahipleri icin tanitim ve sponsorlu yayin secenekleri guncellendi.</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="video-side">
-        <img src="[images.unsplash.com](https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80)" alt="Video galeri gorseli">
-        <div class="video-content">
-          <h3>Video Galerisi</h3>
-          <p>Kisa tanitim videolari, reels tarzi paylasimlar, server spotlight icerikleri ve oyun ici goruntuler burada listelenebilir.</p>
-          <a href="#" class="btn btn-secondary">Tum Videolar</a>
+    </section>
+
+    <aside class="right-column">
+
+      <div class="panel">
+        <div class="panel-title">Giris Yap</div>
+        <div class="panel-body">
+          <div class="login-box">
+            <input type="text" placeholder="Kullanici adi ya da e-posta" />
+            <input type="password" placeholder="Sifre" />
+            <button>Giris yap</button>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section" id="icerikler">
-    <h2 class="section-title">Platformda Neler Var?</h2>
-    <p class="section-text">
-      Silkroad toplulugu icin tanitim, video, inceleme ve server odakli duzenli paylasimlarin bir arada bulundugu modern bir icerik alani.
-    </p>
-
-    <div class="features">
-      <div class="feature-box">
-        <h4>Server Tanitimlari</h4>
-        <p>Private server acilislarini, ozelliklerini ve one cikan yonlerini etkili bir sekilde sun.</p>
+      <div class="panel">
+        <div class="panel-title">Topluluk Baglantilari</div>
+        <div class="panel-body">
+          <div class="quick-links">
+            <a href="#" class="quick-link discord">Discord Sunucusu</a>
+            <a href="#" class="quick-link elite">Elite Community</a>
+            <a href="#" class="quick-link whatsapp">WhatsApp Toplulugu</a>
+            <a href="#" class="quick-link facebook">Facebook Grubu</a>
+            <a href="#" class="quick-link orange">Kisa Link Olustur</a>
+          </div>
+        </div>
       </div>
 
-      <div class="feature-box">
-        <h4>Video Paylasimlari</h4>
-        <p>Tanitim videolari, incelemeler, event kesitleri ve oyun ici goruntuleri duzenli sekilde yayinla.</p>
+      <div class="panel">
+        <div class="panel-title">Live Now</div>
+        <div class="panel-body">
+          <div class="small-stats">
+            <div class="stat-item">
+              <strong>BestSRO</strong>
+              <span>Bu yayin bazilarini kudurtur - TikTok</span>
+            </div>
+            <div class="stat-item">
+              <strong>Yeni yayin eklendi</strong>
+              <span>Canli yayin ve video tanitim alani burada listelenebilir.</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="feature-box">
-        <h4>Topluluk Icerikleri</h4>
-        <p>Oyuncularin ilgisini cekecek haberler, duyurular ve dikkat cekici Silkroad icerikleri paylas.</p>
+      <div class="panel">
+        <div class="panel-title">Buyuk Acilislar</div>
+        <div class="panel-body">
+          <div class="small-stats">
+            <div class="stat-item">
+              <strong>ATHENS 2005</strong>
+              <span>Macro | 80 cap CH | Hard rates | 07.08.2026</span>
+            </div>
+            <div class="stat-item">
+              <strong>Yeni PvP server</strong>
+              <span>Yaklasan acilis tarihi ve one cikan sistemler burada gosterilir.</span>
+            </div>
+            <div class="stat-item">
+              <strong>Video tanitim takvimi</strong>
+              <span>Yayinlanacak tanitim icerikleri ve banner planlamasi icin alan.</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="feature-box">
-        <h4>Reklam ve Is Birligi</h4>
-        <p>Server sahipleri icin tanitim, sponsorlu paylasim ve ozel icerik alanlari sun.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta" id="iletisim">
-    <div class="cta-box">
-      <h2>Tanitimini One Cikar</h2>
-      <p>
-        Silkroad private server tanitimi, video paylasimi, inceleme icerigi ve reklam alanlariyla hedef kitlene daha guclu ulas. Iletisim bolumune kendi baglantilarini ekleyerek bu alani dogrudan kullanabilirsin.
-      </p>
-      <div class="btn-group">
-        <a href="#" class="btn btn-primary">Iletisim</a>
-        <a href="#" class="btn btn-secondary">Reklam Detaylari</a>
-      </div>
-    </div>
-  </section>
+    </aside>
+  </main>
 
   <footer>
     <p>© 2026 Silkroad Tanitim Paylasim Dunyasi - Tum haklari saklidir.</p>
